@@ -1,0 +1,27 @@
+@import
+url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400,700&display=swap");
+$color-green: #678c89;
+$color-darkgreen: #336666;
+$color-orange: #d35e0f;
+$color-white: #fff;
+$color-offwhite: #fcfcfc;
+$color-darkgrey: #1f1f1f;
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+font-size: 62.5%;
+}
+
+body {
+font-family: Roboto, sans-serif;
+line-height: 1.4;
+background-color: $color-offwhite;
+color: $color-darkgrey;
+font-weight: 400;
+font-size: 1.6rem;
+}

@@ -14,15 +14,16 @@ function InputTodo({addTodo}) {
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className='form-container'>
             <input type="text"
+                   className="input-text"
                    placeholder='Add todo...'
                    value={inputText.title}
                    name='title'
                    onChange={(e) => setInputText({
                        ...inputText, [e.target.name]: e.target.value
                    })}/>
-            <input type="submit" placeholder='Add'/>
+            <input className="input-submit" type="submit" placeholder='Add'/>
         </form>
     )
 }

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Header from './Header';
 import TodosList from './TodosList';
 import InputTodo from './InputTodo';
-import { v4 as uuidv4 } from "uuid";
+import {v4 as uuidv4} from "uuid";
 
 function TodoApp() {
     const [todos, setTodos] = useState([]);
@@ -42,7 +42,7 @@ function TodoApp() {
             .catch(console.error);
     }, [])
     return (
-        <>
+        <div className='container'>
             <Header/>
             <InputTodo addTodo={addTodo}/>
             <TodosList
@@ -50,7 +50,7 @@ function TodoApp() {
                 handleChangeProps={handleChange}
                 deleteTodo={deleteTodo}
             />
-        </>
+        </div>
     )
 }
 

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Header from './Header';
 import TodosList from './TodosList';
+import InputTodo from './InputTodo';
+import { v4 as uuidv4 } from "uuid";
 
 function TodoApp() {
     const [todos, setTodos] = useState([]);
@@ -15,6 +17,14 @@ function TodoApp() {
         });
 
         setTodos(todosAfterUpdate);
+    }
+
+    function addTodo(title) {
+        setTodos([...todos, {
+            id: uuidv4(),
+            title: title,
+            completed: false
+        }]);
     }
 
     function deleteTodo(id) {
@@ -34,6 +44,7 @@ function TodoApp() {
     return (
         <>
             <Header/>
+            <InputTodo addTodo={addTodo}/>
             <TodosList
                 todos={todos}
                 handleChangeProps={handleChange}
